@@ -10,6 +10,13 @@ export interface Movie {
 export interface MovieDetails extends Movie {
   Director: string;
   Plot: string;
+  Genre: string;
+  Runtime: string;
+  Actors: string;
 }
 
-
+export interface FavoritesContextType {
+  favorites: Movie[];
+  addFavorite: (movie: Movie) => void;
+  removeFavorite: (id: string) => void;
+}

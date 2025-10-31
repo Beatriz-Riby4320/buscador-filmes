@@ -1,8 +1,8 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+html, body, #root {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
 }
 
 .logo {
@@ -39,4 +39,75 @@
 
 .read-the-docs {
   color: #888;
+}
+
+input[type="text"] {
+  width: 300px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  background-color: rgba(255, 255, 255, 0.7);
+}
+
+button {
+  padding: 10px 20px;
+  margin-left: 10px;
+  background-color: #1a1a1a;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+
+button:hover {
+  border-color: #646cff;
+}
+
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+.movie-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.home-background {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+    Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
+  background-image: url('https://images.pexels.com/photos/109669/pexels-photo-109669.jpeg');
+  background-size: cover;            /* Redimensiona para cobrir toda a tela */
+  background-position: center;       /* Centraliza a imagem */
+  background-repeat: no-repeat;      /* Evita repetição da imagem */
+  background-attachment: fixed;      /* Faz a imagem ficar fixa ao rolar */
+  min-height: 100vh;                 /* Garante que o body ocupe toda a altura da tela */
+  color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.home-content {
+  text-align: center;
+}
+
+.dark-theme {
+  background-color: #121212;
+  color: #ffffff;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.movie-details {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+    Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
+  background-color: #1e1e1e;
+  color: #ffffff;
+  min-height: 100vh;
+  padding: 20px;
 }
