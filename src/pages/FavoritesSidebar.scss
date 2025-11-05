@@ -1,0 +1,49 @@
+.favorites-sidebar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 300px;
+  height: 100vh;
+  background-color: #1e1e1e;
+  color: white;
+  padding: 20px;
+  box-shadow: -2px 0 10px rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+  overflow-y: auto;
+}
+
+.close-btn {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 20px;
+  float: right;
+  cursor: pointer;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.info {
+  margin-left: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+button {
+  margin-top: 5px;
+  padding: 5px;
+  background-color: #646cff;
+  border: none;
+  border-radius: 4px;
+  color: white;
+  cursor: pointer;
+}

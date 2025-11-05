@@ -1,0 +1,14 @@
+@import '../../styles/variables-remover';
+
+.btn-remover {
+  background-color: $remover-bg;
+  color: $remover-text;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $remover-hover;
+  }
+}

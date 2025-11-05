@@ -26,21 +26,23 @@ export default function MovieDetails() {
   
 
   return (
-    <div className="movie-details">
-      <button onClick={() => navigate(-1)}>⬅ Voltar</button>
-      <h1>{movie.Title}</h1>
+  <div className="movie-details">
+    <button onClick={() => navigate(-1)}>⬅ Voltar</button>
+    <h1>{movie.Title}</h1>
 
-      {/* ✅ Botão de favoritar */}
-      <button onClick={() => 
+    <button
+      style={{ marginBottom: '20px' }} // ✅ ajuda a garantir que o botão fique visível
+      onClick={() =>
         isFavorited ? removeFavorite(movie.imdbID) : addFavorite(movie)
-      }>
-        {isFavorited ? '💔 Remover dos Favoritos' : '❤️ Adicionar aos Favoritos'}
-      </button>
+      }
+    >
+      {isFavorited ? '💔 Remover dos Favoritos' : '❤️ Adicionar aos Favoritos'}
+    </button>
 
-      <img src={movie.Poster} alt={movie.Title} />
-      <p><strong>Ano:</strong> {movie.Year}</p>
-      <p><strong>Diretor:</strong> {movie.Director}</p>
-      <p><strong>Enredo:</strong> {movie.Plot}</p>
-    </div>
-  );
+    <img src={movie.Poster} alt={movie.Title} />
+    <p><strong>Ano:</strong> {movie.Year}</p>
+    <p><strong>Diretor:</strong> {movie.Director}</p>
+    <p><strong>Enredo:</strong> {movie.Plot}</p>
+  </div>
+);
 }

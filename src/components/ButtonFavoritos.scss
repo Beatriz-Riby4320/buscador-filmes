@@ -1,0 +1,14 @@
+@import '../../styles/variables-favoritos';
+
+.btn-favoritos {
+  background-color: $favoritos-bg;
+  color: $favoritos-text;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $favoritos-hover;
+  }
+}

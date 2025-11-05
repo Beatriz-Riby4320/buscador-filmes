@@ -2,11 +2,11 @@ import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { searchMovies } from '../services/api';
 import { type Movie } from '../types';
-
-
+import FavoritesSidebar from './FavoritesSidebar'; // ✅ se está na pasta pages
 
 export default function Home() {
   const [query, setQuery] = useState('');
+  const [showFavorites, setShowFavorites] = useState(false);
   const navigate = useNavigate();
 
   const handleSearch = async (e: React.FormEvent) => {
@@ -28,7 +28,15 @@ export default function Home() {
           />
           <button type="submit">Buscar</button>
         </form>
+
+        {/* ✅ Botão para abrir favoritos */}
+        <button onClick={() => setShowFavorites(true)} style={{ marginTop: '20px' }}>
+          ⭐ Ver Favoritos
+        </button>
       </div>
+
+      {/* ✅ Renderiza o componente FavoritesSidebar */}
+      {showFavorites && <FavoritesSidebar onClose={() => setShowFavorites(false)} />}
     </div>
   );
 }

@@ -1,0 +1,14 @@
+@import '../../styles/variables-buscar';
+
+.btn-buscar {
+  background-color: $buscar-bg;
+  color: $buscar-text;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $buscar-hover;
+  }
+}
